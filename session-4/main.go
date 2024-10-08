@@ -69,10 +69,6 @@ func task_countdown(remaining int) { //taskCount
 
 }
 
-/// change-it
-
-// change-2
-
 // Variadic functions
 
 //Implement a variadic function to accept and print the
