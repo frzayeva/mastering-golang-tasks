@@ -1,4 +1,4 @@
-package main
+package methods
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ func (c Circle) area() float64 {
 
 }
 
-func main() {
+func Task3() {
 
 	c := Circle{
 

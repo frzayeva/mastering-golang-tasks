@@ -1,4 +1,4 @@
-package main
+package structs
 
 import "fmt"
 
@@ -8,7 +8,7 @@ type Book struct {
 	pages  int
 }
 
-func main() {
+func Task1() {
 
 	book1 := Book{
 

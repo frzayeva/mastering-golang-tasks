@@ -1,4 +1,4 @@
-package main
+package methods
 
 import "fmt"
 
@@ -7,7 +7,7 @@ type Student struct {
 	Grades []int
 }
 
-func (s Student) average() float64 {
+func (s Student) Average() float64 {
 	total := 0
 	for _, grade := range s.Grades {
 		total += grade
@@ -17,8 +17,8 @@ func (s Student) average() float64 {
 }
 
 func (s Student) Comparewith(s2 Student) string {
-	avg1 := s.average()
-	avg2 := s2.average()
+	avg1 := s.Average()
+	avg2 := s2.Average()
 
 	fmt.Printf(" Student 1 :%s, Average Grade : %.2f\n", s.Name, avg1)
 	fmt.Printf("Student 2: %s, Average Grade :%.2f\n", s2.Name, avg2)
@@ -31,7 +31,7 @@ func (s Student) Comparewith(s2 Student) string {
 
 }
 
-func main() {
+func Task4() {
 
 	s1 := Student{
 

@@ -1,4 +1,4 @@
-package main
+package embeddings
 
 import "fmt"
 
@@ -13,7 +13,7 @@ type Car struct {
 	FuelType string
 }
 
-func main() {
+func Task6() {
 	c := Car{
 		Vehicle: Vehicle{
 			Make:  "Kia",

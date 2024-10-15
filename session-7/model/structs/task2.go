@@ -1,4 +1,4 @@
-package main
+package structs
 
 import "fmt"
 
@@ -16,7 +16,7 @@ func (r Rectangle) Perimeter() float64 {
 	return 2 * (r.width + r.height)
 }
 
-func main() {
+func Task2() {
 
 	//var rect Rectangle
 	//

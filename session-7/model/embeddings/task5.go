@@ -1,4 +1,4 @@
-package main
+package embeddings
 
 import "fmt"
 
@@ -14,7 +14,7 @@ type Employee struct {
 	Position   string
 }
 
-func main() {
+func Task5() {
 	e := Employee{
 		person: Person{
 			FirstName: "Ali",
