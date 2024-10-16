@@ -20,7 +20,7 @@ func (p Person) Speak() string {
 	return "Hello!"
 }
 
-func speaking(s Speaker) {
+func speaking(s Speaker) { // burda biz interface uchun method yazmish sayiliriq? s Speaker receivable sayilir?
 	fmt.Println(s.Speak())
 }
 
