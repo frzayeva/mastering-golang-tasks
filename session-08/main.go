@@ -2,9 +2,7 @@ package main
 
 //import "session-08/model/defining"
 
-import (
-	"session-08/model/assertion"
-)
+import "session-08/model/switching"
 
 func main() {
 	//defining.Task1()
@@ -12,5 +10,6 @@ func main() {
 	//implementing.Task3()
 	//implementing.Task3()
 	//implementing.Task4()
-	assertion.Task5()
+	//assertion.Task5()
+	switching.Task6()
 }
