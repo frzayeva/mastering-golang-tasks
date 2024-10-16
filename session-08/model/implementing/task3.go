@@ -32,6 +32,7 @@ func Task3() {
 
 	fmt.Println(result_c)
 	fmt.Println(result_p)
+
 	// why it doesn't print result the way under
 	//var payment1 PaymentProcessor
 	//var payment2 PaymentProcessor
