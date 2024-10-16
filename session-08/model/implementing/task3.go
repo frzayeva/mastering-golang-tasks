@@ -3,38 +3,42 @@ package implementing
 import "fmt"
 
 type PaymentProcessor interface {
-	ProcessPayment(amount float64) float64
+	ProcessPayment(amount float64) string
 }
 
-type CreditCard struct {
-	amount float64
+type CreditCard struct{}
+
+type Paypal struct{}
+
+func (c CreditCard) ProcessPayment(amount float64) string {
+
+	return fmt.Sprintf("Processing credit card payment %.2f", amount)
 }
 
-type Paypal struct {
-	amount float64
+func (p Paypal) ProcessPayment(amount float64) string {
+	return fmt.Sprintf("Processing paypal payment %.2f", amount)
 }
 
-func (c CreditCard) ProcessPayment(amount float64) float64 {
-
-	return c.amount
-}
-
-func (p Paypal) ProcessPayment(amount float64) float64 {
-	return p.amount
+func ProcessPaymentFinal(pp PaymentProcessor, amount float64) string {
+	return pp.ProcessPayment(amount)
 }
 
 func Task3() {
-	var c PaymentProcessor
-	var p PaymentProcessor
+	var c CreditCard
+	var p Paypal
 	//c := PaymentProcessor //why can't we name like this ? :\
-	c = CreditCard{
-		amount: 30.5,
-	}
+	result_c := ProcessPaymentFinal(c, 50.5)
+	result_p := ProcessPaymentFinal(p, 6.3)
 
-	p = Paypal{
-		amount: 20.5,
-	}
-	fmt.Println(c.ProcessPayment(3.5))
-	fmt.Println(p.ProcessPayment(3.5))
+	fmt.Println(result_c)
+	fmt.Println(result_p)
+	// why it doesn't print result the way under
+	//var payment1 PaymentProcessor
+	//var payment2 PaymentProcessor
+	//
+	//payment1 = CreditCard{}
+	//payment2 = Paypal{}
+	//ProcessPaymentFinal(payment1, 100.5)
+	//ProcessPaymentFinal(payment2, 10.5)
 
 }
