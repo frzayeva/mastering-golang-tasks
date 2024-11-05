@@ -10,6 +10,7 @@ func main() {
 	//channels_basic_operations.Task3()
 	//channels_basic_operations.Task4
 
-	buffered_unbuffered_channels.Task5()
+	//buffered_unbuffered_channels.Task5()
+	buffered_unbuffered_channels.Task6()
 
 }

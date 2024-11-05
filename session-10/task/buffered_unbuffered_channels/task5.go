@@ -22,5 +22,5 @@ func Task5() {
 	go buff_channel(ch)
 
 	close(ch)
-
+	//  can't understand why output is not shown? :((
 }
